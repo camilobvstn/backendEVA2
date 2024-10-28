@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for us in usuarios %}
+            <tr>
+                <td>{{us.nombre_usuario}}</td>
+                <td>{{us.nombre}}</td>
+                <td>{{us.apellido}}</td>
+                <td>{{us.edad}}</td>
+                <td><a href="/actualizar/{{us.id}}/">Actualizar</a></td>
+                <td><a href="/eliminar/{{us.id}}/">Eliminar</a></td>
+            </tr>
+        </tbody>
+        {% endfor  %}
+    </table>
+</body>
+</html>
